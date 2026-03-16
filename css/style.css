@@ -289,7 +289,7 @@ button:hover{
   
 /*colocando imagenes en div ofertas*/
 #oferta-pienso{
-    background-image: url(/media/ofertapienso.jpg);
+    background-image: url(../media/ofertapienso.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
