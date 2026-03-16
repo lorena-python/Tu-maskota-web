@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Maskota</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <p class="logo">&#128062; Tu Maskota</p>
+            <ul class="menu-nav">
+                <li><a href="index.html" class="menu-nav-item">Inicio</a></li>
+                <li><a href="perros.html" class="menu-nav-item">Perros</a></li>
+                <li><a href="gatos.html" class="menu-nav-item">Gatos</a></li>
+                <li><a href="ofertas.html" class="menu-nav-item">Ofertas</a></li>
+                <li><a href="servicios.html" class="menu-nav-item">Servicios</a></li>
+                <li><a href="contacto.html" class="menu-nav-item">Contacto</a></li>
+            </ul>
+            <button class="nav-boton">
+                <img src="media/menu.png" alt="hamburguesa" width="50px" class="btn1">
+            </button>
+            <div class="nav-acciones">
+                <button id="tm-cart-button"
+                aria-label="Abrir carrito"
+                class="tm-cart-btn">
+                &#128722; <span id="tm-cart-count">0</span>
+            </button>
+            </div>
+        </nav>
+    </header>
+
+    </section>
+    <section id="perros">
+        <div class="container">
+            <h2>Perros</h2>
+            <div class="item-perro" id="alimento-perro">
+                <h3>Alimentación</h3>
+                <p>Pienso seco,hipoalergénico y especial para cada etapa de vida,además comida natural y snacks</p>
+                <button type="button" class="btn-conocelo" data-animal="perro" data-cat="alimentacion">¡Conócelo!</button>
+            </div>
+            <div class="item-perro" id="higiene-perro">
+                <h3>Higiene</h3>
+                <p>Champús,cepillos y peines,toallitas húmedas,cortauñas,empapadores,colonia y desinfectantes</p>
+             <button type="button" class="btn-conocelo" data-animal="perro" data-cat="higiene">¡Conócelo!</button>
+            </div>
+            <div class="item-perro" id="juguetes-perro">
+                <h3>Juguetes</h3>
+                <p>Juguetes con sonido, de entrenamiento.., pelotas, peluches</p>
+                 <button type="button" class="btn-conocelo" data-animal="perro" data-cat="juguetes">¡Conócelo!</button>
+            </div>
+            <div class="item-perro" id="accesorios-perro">
+                <h3>Accesorios</h3>
+                <p>Collares o arnés,correas,camas,comederos,ropa,transportines</p>
+                <button type="button" class="btn-conocelo" data-animal="perro" data-cat="accesorios">¡Conócelo!</button> 
+            </div>
+        </div>
+    </section>
+     
+     
+    <footer id="contacto">
+        <div class="container">
+          <div class="contacto">
+            <p><strong>Contacto</strong></p>
+            <p>Email:tumaskota@gmail.com</p>
+            <p>Teléfono: 658182463</p>
+            <p>Dirección: Pol.Ind.Rodalabota,45, Sevilla</p>
+            </div>
+            <div class="novedades">
+                <p><strong>Novedades</strong></p>
+                <input type="texto" id="entrada-txt" placeholder="Ingrese su correo electrónico">
+                <button id="btn-enviar">Enviar</button>       
+            <nav class="redes">
+                <a href=""><img src="media/facebook.png" alt="facebook" width="60px"></a>
+                <a href=""><img src="media/instagram.jpg" alt="instagram" width="60px"></a>
+                <a href=""><img src="media/twitter.png" alt="twitter" width="60px"></a>
+            </nav>  
+        <div class="copy">
+            &copy; Tu Maskota
+             </div> 
+        </div> 
+        </div>
+    </footer>
+    
+    <!--modal carrito-perros-->
+<div id="tm-cart-modal" class="tm-cart-modal modal" aria-hidden="true" hidden>
+  <div class="tm-cart-backdrop"></div>
+
+  <div class="tm-cart-panel" role="dialog" aria-modal="true" aria-labelledby="tm-cart-title">
+    <header class="tm-cart-header">
+      <h3 id="tm-cart-title">Tu cesta</h3>
+      <button class="tm-cart-close" data-close-aria-label="Cerrar">X</button>
+    </header>
+
+    <!-- Aquí inyecta el JS los productos del carrito -->
+    <ul id="cart-list" class="tm-cart-items"></ul>
+
+    <footer class="tm-cart-footer">
+      <div class="tm-cart-total">
+        <span>Total</span>
+        <strong id="tm-cart-total">€0,00</strong>
+      </div>
+      <div class="tm-cart-actions">
+        <button id="tm-cart-clear" class="tm-cart-clear">Vaciar</button>
+        <button id="tm-cart-checkout" class="tm-cart-checkout">Pagar</button>
+      </div>
+    </footer>
+  </div>
+</div>
+
+<!-- MODAL GALERÍA -->
+<div id="tm-gallery-modal" class="modal" aria-hidden="true" hidden>
+  <div class="tm-cart-backdrop"></div>
+
+  <div class="tm-gallery-panel" role="dialog" aria-modal="true" aria-labelledby="gallery-title">
+    <header class="tm-cart-header">
+      <h3 id="gallery-title">Productos</h3>
+      <button class="tm-cart-close" aria-label="Cerrar">✕</button>
+    </header>
+
+    <!-- Aquí inyecta el JS los productos según animal + categoría -->
+    <div id="gallery-grid" class="gallery-grid"></div>
+  </div>
+</div>
+
+<!-- Modal OFERTAS -->
+<div id="tm-offer-modal" class="modal" aria-hidden="true" hidden>
+  <div class="tm-cart-backdrop"></div>
+  <div class="tm-gallery-panel" role="dialog" aria-modal="true" aria-labelledby="offer-title">
+    <header class="tm-cart-header">
+      <h3 id="offer-title">Detalles de la oferta</h3>
+      <button class="tm-cart-close" aria-label="Cerrar">X</button>
+    </header>
+
+ <!-- Aquí se inyecta la imagen -->
+    <div id="offer-content" class="offer-body">
+     
+    </div>
+  </div>
+</div>
+        
+    <script src="js/script.js"></script>
+</body>
+</html>
