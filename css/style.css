@@ -144,15 +144,15 @@ display: none;
 }
 
 #slider1{
-    background-image: url("/media/perrogato3.png");
+    background-image: url("../media/perrogato3.png");
 }
 
 #slider2{
-    background-image: url("/media/slider2.jpg");
+    background-image: url("../media/slider2.jpg");
 }
 
 #slider3{
-    background-image: url("/media/slider3.jpg");
+    background-image: url("../media/slider3.jpg");
 }
 /*animando slider*/
 @keyframes slide{
